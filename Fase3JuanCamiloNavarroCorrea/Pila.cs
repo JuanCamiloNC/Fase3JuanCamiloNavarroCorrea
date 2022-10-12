@@ -10,22 +10,19 @@ using System.Windows.Forms;
 
 namespace Fase3JuanCamiloNavarroCorrea
 {
-    public partial class Menu : Form
+    public partial class Pila : Form
     {
-        public Menu()
+        public Pila()
         {
             InitializeComponent();
         }
-        Pila pila = new Pila();
-        private void button1_Click(object sender, EventArgs e)
-        {
-            pila.Show();
-            this.Hide();
-        }
+        
 
-        private void button4_Click(object sender, EventArgs e)
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Menu m = new Menu();
+            m.Show();
+            this.Hide();
         }
     }
 }
