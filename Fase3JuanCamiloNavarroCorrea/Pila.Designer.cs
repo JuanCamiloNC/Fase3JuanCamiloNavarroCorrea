@@ -40,20 +40,20 @@
             this.label10 = new System.Windows.Forms.Label();
             this.P_NumeroDelCDT = new System.Windows.Forms.TextBox();
             this.P_NumeroDeIdentificacion = new System.Windows.Forms.TextBox();
-            this.P_estrato = new System.Windows.Forms.TextBox();
-            this.P_Categoria = new System.Windows.Forms.TextBox();
             this.P_IngreseUnValor = new System.Windows.Forms.TextBox();
-            this.P_MesDeApertura = new System.Windows.Forms.TextBox();
             this.P_Nombre = new System.Windows.Forms.TextBox();
             this.P_Direccion = new System.Windows.Forms.TextBox();
             this.P_TiempoDelCDT = new System.Windows.Forms.TextBox();
             this.P_TotalApagar = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DatosEnPantalla = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.P_Categoria = new System.Windows.Forms.ComboBox();
+            this.P_estrato = new System.Windows.Forms.ComboBox();
+            this.P_MesDeApertura = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.DatosEnPantalla)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -161,33 +161,12 @@
             this.P_NumeroDeIdentificacion.Size = new System.Drawing.Size(100, 23);
             this.P_NumeroDeIdentificacion.TabIndex = 11;
             // 
-            // P_estrato
-            // 
-            this.P_estrato.Location = new System.Drawing.Point(254, 110);
-            this.P_estrato.Name = "P_estrato";
-            this.P_estrato.Size = new System.Drawing.Size(100, 23);
-            this.P_estrato.TabIndex = 12;
-            // 
-            // P_Categoria
-            // 
-            this.P_Categoria.Location = new System.Drawing.Point(254, 157);
-            this.P_Categoria.Name = "P_Categoria";
-            this.P_Categoria.Size = new System.Drawing.Size(100, 23);
-            this.P_Categoria.TabIndex = 13;
-            // 
             // P_IngreseUnValor
             // 
             this.P_IngreseUnValor.Location = new System.Drawing.Point(254, 206);
             this.P_IngreseUnValor.Name = "P_IngreseUnValor";
             this.P_IngreseUnValor.Size = new System.Drawing.Size(100, 23);
             this.P_IngreseUnValor.TabIndex = 14;
-            // 
-            // P_MesDeApertura
-            // 
-            this.P_MesDeApertura.Location = new System.Drawing.Point(594, 28);
-            this.P_MesDeApertura.Name = "P_MesDeApertura";
-            this.P_MesDeApertura.Size = new System.Drawing.Size(100, 23);
-            this.P_MesDeApertura.TabIndex = 15;
             // 
             // P_Nombre
             // 
@@ -217,14 +196,14 @@
             this.P_TotalApagar.Size = new System.Drawing.Size(100, 23);
             this.P_TotalApagar.TabIndex = 19;
             // 
-            // dataGridView1
+            // DatosEnPantalla
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(52, 271);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(642, 150);
-            this.dataGridView1.TabIndex = 20;
+            this.DatosEnPantalla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DatosEnPantalla.Location = new System.Drawing.Point(52, 271);
+            this.DatosEnPantalla.Name = "DatosEnPantalla";
+            this.DatosEnPantalla.RowTemplate.Height = 25;
+            this.DatosEnPantalla.Size = new System.Drawing.Size(642, 150);
+            this.DatosEnPantalla.TabIndex = 20;
             // 
             // menuStrip1
             // 
@@ -244,12 +223,14 @@
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
             this.registrarToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.registrarToolStripMenuItem.Text = "Registrar";
+            this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
             this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
+            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -258,21 +239,45 @@
             this.salirToolStripMenuItem.Text = "Atras";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // P_Categoria
+            // 
+            this.P_Categoria.FormattingEnabled = true;
+            this.P_Categoria.Location = new System.Drawing.Point(254, 157);
+            this.P_Categoria.Name = "P_Categoria";
+            this.P_Categoria.Size = new System.Drawing.Size(100, 23);
+            this.P_Categoria.TabIndex = 22;
+            // 
+            // P_estrato
+            // 
+            this.P_estrato.FormattingEnabled = true;
+            this.P_estrato.Location = new System.Drawing.Point(254, 110);
+            this.P_estrato.Name = "P_estrato";
+            this.P_estrato.Size = new System.Drawing.Size(100, 23);
+            this.P_estrato.TabIndex = 23;
+            // 
+            // P_MesDeApertura
+            // 
+            this.P_MesDeApertura.FormattingEnabled = true;
+            this.P_MesDeApertura.Location = new System.Drawing.Point(594, 28);
+            this.P_MesDeApertura.Name = "P_MesDeApertura";
+            this.P_MesDeApertura.Size = new System.Drawing.Size(100, 23);
+            this.P_MesDeApertura.TabIndex = 24;
+            // 
             // Pila
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.P_MesDeApertura);
+            this.Controls.Add(this.P_estrato);
+            this.Controls.Add(this.P_Categoria);
+            this.Controls.Add(this.DatosEnPantalla);
             this.Controls.Add(this.P_TotalApagar);
             this.Controls.Add(this.P_TiempoDelCDT);
             this.Controls.Add(this.P_Direccion);
             this.Controls.Add(this.P_Nombre);
-            this.Controls.Add(this.P_MesDeApertura);
             this.Controls.Add(this.P_IngreseUnValor);
-            this.Controls.Add(this.P_Categoria);
-            this.Controls.Add(this.P_estrato);
             this.Controls.Add(this.P_NumeroDeIdentificacion);
             this.Controls.Add(this.P_NumeroDelCDT);
             this.Controls.Add(this.label10);
@@ -289,7 +294,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Pila";
             this.Text = "Pila";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatosEnPantalla)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -311,18 +316,18 @@
         private Label label10;
         private TextBox P_NumeroDelCDT;
         private TextBox P_NumeroDeIdentificacion;
-        private TextBox P_estrato;
-        private TextBox P_Categoria;
         private TextBox P_IngreseUnValor;
-        private TextBox P_MesDeApertura;
         private TextBox P_Nombre;
         private TextBox P_Direccion;
         private TextBox P_TiempoDelCDT;
         private TextBox P_TotalApagar;
-        private DataGridView dataGridView1;
+        private DataGridView DatosEnPantalla;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem registrarToolStripMenuItem;
         private ToolStripMenuItem eliminarToolStripMenuItem;
         private ToolStripMenuItem salirToolStripMenuItem;
+        private ComboBox P_Categoria;
+        private ComboBox P_estrato;
+        private ComboBox P_MesDeApertura;
     }
 }
