@@ -29,7 +29,7 @@ namespace Fase3JuanCamiloNavarroCorrea
         private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PilaCDT p = new PilaCDT();
-            p.numeroDelCDT = Convert.ToInt32(P_NumeroDelCDT);
+            p.numeroDelCDT = Convert.ToDouble(P_NumeroDelCDT.Text);
             p.numeroDeIdentificacion = Convert.ToDouble(P_NumeroDeIdentificacion.Text);
             p.estrato = Convert.ToInt32(P_estrato.Text);
             p.categoria = P_Categoria.Text;
@@ -47,6 +47,24 @@ namespace Fase3JuanCamiloNavarroCorrea
         //Funcion para eliminar de la pila
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            PilaCDT p = new PilaCDT();
+            if (usuariosDelCTD.Count != 0)
+            {
+                p = usuariosDelCTD.Pop();
+                DatosEnPantalla.DataSource = usuariosDelCTD.ToArray();
+                MessageBox.Show("Se elimino el elemento");
+           
+            }
+            else
+            {
+                MessageBox.Show("NO hay elementos que borrar");
+
+            }
+        }
+
+        private void limpiarElementos()
+        {
+            P_NumeroDelCDT.Clear();
 
         }
     }
