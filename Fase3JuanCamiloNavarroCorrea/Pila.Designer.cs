@@ -192,6 +192,7 @@
             // 
             // P_TotalApagar
             // 
+            this.P_TotalApagar.Enabled = false;
             this.P_TotalApagar.Location = new System.Drawing.Point(594, 206);
             this.P_TotalApagar.Name = "P_TotalApagar";
             this.P_TotalApagar.Size = new System.Drawing.Size(100, 23);

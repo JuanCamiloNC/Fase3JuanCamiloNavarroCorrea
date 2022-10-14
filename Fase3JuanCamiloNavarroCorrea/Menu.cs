@@ -17,6 +17,7 @@ namespace Fase3JuanCamiloNavarroCorrea
             InitializeComponent();
         }
         Pila pila = new Pila();
+        Cola cola = new Cola();
         private void button1_Click(object sender, EventArgs e)
         {
             pila.Show();
@@ -26,6 +27,12 @@ namespace Fase3JuanCamiloNavarroCorrea
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            cola.Show();
+            this.Hide();
         }
     }
 }
