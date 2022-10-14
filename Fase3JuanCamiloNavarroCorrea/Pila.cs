@@ -38,9 +38,12 @@ namespace Fase3JuanCamiloNavarroCorrea
             p.nombre = P_Nombre.Text;
             p.direccion = P_Direccion.Text;
             p.tiempoDelCDT = P_TiempoDelCDT.Text;
+            P_TotalApagar.Text = Convert.ToString(p.calcularElPago());
+            p.totalAPagar = P_TotalApagar.Text;
             usuariosDelCTD.Push(p);
             DatosEnPantalla.DataSource = null;
             DatosEnPantalla.DataSource = usuariosDelCTD.ToArray();
+            
         }
 
 
@@ -65,7 +68,20 @@ namespace Fase3JuanCamiloNavarroCorrea
         private void limpiarElementos()
         {
             P_NumeroDelCDT.Clear();
+            P_NumeroDeIdentificacion.Clear();
+            P_estrato.Text = "";
+            P_Categoria.Text = "";
+            P_IngreseUnValor.Clear();
+            P_MesDeApertura.Text = "";
+            P_Nombre.Clear();
+            P_Direccion.Clear();
+            P_TiempoDelCDT.Clear();
+            P_TotalApagar.Clear();
+        }
 
+        private void limpiarFormularioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            limpiarElementos();
         }
     }
 }

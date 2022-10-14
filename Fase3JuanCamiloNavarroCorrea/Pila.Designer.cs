@@ -50,6 +50,7 @@
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.limpiarFormularioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.P_Categoria = new System.Windows.Forms.ComboBox();
             this.P_estrato = new System.Windows.Forms.ComboBox();
             this.P_MesDeApertura = new System.Windows.Forms.ComboBox();
@@ -211,7 +212,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarToolStripMenuItem,
             this.eliminarToolStripMenuItem,
-            this.salirToolStripMenuItem});
+            this.salirToolStripMenuItem,
+            this.limpiarFormularioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -238,6 +240,13 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.salirToolStripMenuItem.Text = "Atras";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // limpiarFormularioToolStripMenuItem
+            // 
+            this.limpiarFormularioToolStripMenuItem.Name = "limpiarFormularioToolStripMenuItem";
+            this.limpiarFormularioToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
+            this.limpiarFormularioToolStripMenuItem.Text = "Limpiar Formulario";
+            this.limpiarFormularioToolStripMenuItem.Click += new System.EventHandler(this.limpiarFormularioToolStripMenuItem_Click);
             // 
             // P_Categoria
             // 
@@ -329,5 +338,6 @@
         private ComboBox P_Categoria;
         private ComboBox P_estrato;
         private ComboBox P_MesDeApertura;
+        private ToolStripMenuItem limpiarFormularioToolStripMenuItem;
     }
 }
