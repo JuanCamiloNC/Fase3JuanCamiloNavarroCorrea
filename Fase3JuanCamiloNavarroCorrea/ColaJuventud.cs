@@ -13,7 +13,8 @@ namespace Fase3JuanCamiloNavarroCorrea
         public string NombreCompleto { get; set; }
         public string Direccion { get; set; }
         public string Comunas { get; set; }
-        public string Genero { get; set; } 
+        public string Genero { get; set; }
+        public DateTime Fecha { get; set; }
 
         //Metosdos o Funciones
         //A

@@ -44,7 +44,7 @@
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.FechaDeRegistro = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.DatosDeLaCola)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -157,18 +157,21 @@
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
             this.registrarToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.registrarToolStripMenuItem.Text = "Registrar";
+            this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
             this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
+            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // label6
             // 
@@ -179,12 +182,12 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Fecha";
             // 
-            // dateTimePicker1
+            // FechaDeRegistro
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(505, 48);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(232, 23);
-            this.dateTimePicker1.TabIndex = 13;
+            this.FechaDeRegistro.Location = new System.Drawing.Point(505, 48);
+            this.FechaDeRegistro.Name = "FechaDeRegistro";
+            this.FechaDeRegistro.Size = new System.Drawing.Size(232, 23);
+            this.FechaDeRegistro.TabIndex = 13;
             // 
             // Cola
             // 
@@ -192,7 +195,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.FechaDeRegistro);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.DatosDeLaCola);
             this.Controls.Add(this.C_Direccion);
@@ -235,6 +238,6 @@
         private ToolStripMenuItem eliminarToolStripMenuItem;
         private ToolStripMenuItem salirToolStripMenuItem;
         private Label label6;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker FechaDeRegistro;
     }
 }
