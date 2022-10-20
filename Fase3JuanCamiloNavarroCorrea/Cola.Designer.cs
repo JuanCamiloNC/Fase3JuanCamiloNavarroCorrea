@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,10 +44,18 @@
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.limpiarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.FechaDeRegistro = new System.Windows.Forms.DateTimePicker();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label7 = new System.Windows.Forms.Label();
+            this.C_AuxilioE = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DatosDeLaCola)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -97,6 +106,17 @@
             // C_Comunas
             // 
             this.C_Comunas.FormattingEnabled = true;
+            this.C_Comunas.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
             this.C_Comunas.Location = new System.Drawing.Point(226, 187);
             this.C_Comunas.Name = "C_Comunas";
             this.C_Comunas.Size = new System.Drawing.Size(121, 23);
@@ -105,6 +125,10 @@
             // C_Genero
             // 
             this.C_Genero.FormattingEnabled = true;
+            this.C_Genero.Items.AddRange(new object[] {
+            "Femenino",
+            "Masculino",
+            "No Binario"});
             this.C_Genero.Location = new System.Drawing.Point(226, 241);
             this.C_Genero.Name = "C_Genero";
             this.C_Genero.Size = new System.Drawing.Size(121, 23);
@@ -145,7 +169,9 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarToolStripMenuItem,
             this.eliminarToolStripMenuItem,
-            this.salirToolStripMenuItem});
+            this.salirToolStripMenuItem,
+            this.reportesToolStripMenuItem,
+            this.limpiarDatosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -173,10 +199,24 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            this.reportesToolStripMenuItem.Click += new System.EventHandler(this.reportesToolStripMenuItem_Click);
+            // 
+            // limpiarDatosToolStripMenuItem
+            // 
+            this.limpiarDatosToolStripMenuItem.Name = "limpiarDatosToolStripMenuItem";
+            this.limpiarDatosToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
+            this.limpiarDatosToolStripMenuItem.Text = "Limpiar Datos";
+            this.limpiarDatosToolStripMenuItem.Click += new System.EventHandler(this.limpiarDatosToolStripMenuItem_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(432, 48);
+            this.label6.Location = new System.Drawing.Point(386, 48);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 15);
             this.label6.TabIndex = 12;
@@ -184,10 +224,47 @@
             // 
             // FechaDeRegistro
             // 
-            this.FechaDeRegistro.Location = new System.Drawing.Point(505, 48);
+            this.FechaDeRegistro.Location = new System.Drawing.Point(459, 48);
             this.FechaDeRegistro.Name = "FechaDeRegistro";
             this.FechaDeRegistro.Size = new System.Drawing.Size(232, 23);
             this.FechaDeRegistro.TabIndex = 13;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(386, 97);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(107, 15);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Auxilio Economico";
+            // 
+            // C_AuxilioE
+            // 
+            this.C_AuxilioE.Enabled = false;
+            this.C_AuxilioE.Location = new System.Drawing.Point(514, 89);
+            this.C_AuxilioE.Name = "C_AuxilioE";
+            this.C_AuxilioE.Size = new System.Drawing.Size(100, 23);
+            this.C_AuxilioE.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(386, 143);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(81, 15);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Prosimo pago";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(514, 135);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.TabIndex = 17;
             // 
             // Cola
             // 
@@ -195,6 +272,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.C_AuxilioE);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.FechaDeRegistro);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.DatosDeLaCola);
@@ -215,6 +296,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DatosDeLaCola)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,5 +321,12 @@
         private ToolStripMenuItem salirToolStripMenuItem;
         private Label label6;
         private DateTimePicker FechaDeRegistro;
+        private ErrorProvider errorProvider1;
+        private ToolStripMenuItem reportesToolStripMenuItem;
+        private TextBox C_AuxilioE;
+        private Label label7;
+        private ToolStripMenuItem limpiarDatosToolStripMenuItem;
+        private TextBox textBox1;
+        private Label label8;
     }
 }

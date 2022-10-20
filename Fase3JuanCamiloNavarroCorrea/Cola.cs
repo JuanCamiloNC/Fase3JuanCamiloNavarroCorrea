@@ -27,6 +27,57 @@ namespace Fase3JuanCamiloNavarroCorrea
 
         private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Filtros para que no se ingresen valores en blanco.
+            if (C_Identificacion.Text == "")
+            {
+                errorProvider1.SetError(C_Identificacion, "Debe ingresar la identificacion");
+                C_Identificacion.Focus();
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(C_Identificacion, "");
+            }
+            if (C_NombreC.Text == "")
+            {
+                errorProvider1.SetError(C_NombreC, "Debe ingresar un nombre");
+                C_NombreC.Focus();
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(C_NombreC, "");
+            }
+            if (C_Direccion.Text == "")
+            {
+                errorProvider1.SetError(C_Direccion, "Debe ingresar una direccion.");
+                C_Direccion.Focus();
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(C_Direccion, "");
+            }
+            if (C_Comunas.Text == "")
+            {
+                errorProvider1.SetError(C_Comunas, "Debe elegir una comuna.");
+                C_Comunas.Focus();
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(C_Comunas, "");
+            }
+            if (C_Genero.Text == "")
+            {
+                errorProvider1.SetError(C_Genero, "Debe seleccionar su genero.");
+                C_Genero.Focus();
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(C_Genero, "");
+            }
             ColaJuventud joven = new ColaJuventud();
             joven.Identificacion = C_Identificacion.Text;
             joven.NombreCompleto = C_NombreC.Text;
@@ -34,10 +85,11 @@ namespace Fase3JuanCamiloNavarroCorrea
             joven.Comunas = C_Comunas.Text;
             joven.Genero = C_Genero.Text;
             joven.Fecha = FechaDeRegistro.Value;
+            C_AuxilioE.Text = Convert.ToString(joven.auxilioEconomico());
             colaDeDatos.Enqueue(joven);
             DatosDeLaCola.DataSource = null;
             DatosDeLaCola.DataSource = colaDeDatos.ToList();
-            limpiarDatos();
+            
         }
         private void limpiarDatos()
         {
@@ -46,6 +98,7 @@ namespace Fase3JuanCamiloNavarroCorrea
             C_Direccion.Clear();
             C_Comunas.Text = "";
             C_Genero.Text = "";
+            C_AuxilioE.Clear();
            
         }
 
@@ -53,12 +106,26 @@ namespace Fase3JuanCamiloNavarroCorrea
         {
             if (colaDeDatos.Count != 0)
             {
-
+                ColaJuventud joven = new ColaJuventud();   
+                joven = colaDeDatos.Dequeue();
+                DatosDeLaCola.DataSource = colaDeDatos.ToList();
+                MessageBox.Show("Se elimino el elemento.");
             }
             else
             {
                 MessageBox.Show("NO hay elementos para eliminar.");
             }
+        }
+
+        private void limpiarDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            limpiarDatos();
+        }
+
+        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string mensaje = colaDeDatos.Count.ToString();
+            MessageBox.Show($"Total de registros ingresados: {mensaje}");
         }
     }
 }

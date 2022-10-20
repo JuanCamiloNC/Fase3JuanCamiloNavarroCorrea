@@ -15,8 +15,23 @@ namespace Fase3JuanCamiloNavarroCorrea
         public string Comunas { get; set; }
         public string Genero { get; set; }
         public DateTime Fecha { get; set; }
+        public double auxilio { get; set; }
 
         //Metosdos o Funciones
-        //A
+        
+        public double auxilioEconomico()
+        {
+            if (Convert.ToDouble(this.Comunas) == 1 || Convert.ToDouble(this.Comunas) == 8 
+                || Convert.ToDouble(this.Comunas) == 10)
+            {
+                this.auxilio = 100000;
+            }
+            else if (Convert.ToDouble(this.Comunas) != 1 || Convert.ToDouble(this.Comunas) != 8
+                || Convert.ToDouble(this.Comunas) != 10)
+            {
+                this.auxilio = 50000;
+            }
+            return this.auxilio;
+        }
     }
 }
