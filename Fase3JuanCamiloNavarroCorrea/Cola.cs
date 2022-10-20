@@ -86,6 +86,7 @@ namespace Fase3JuanCamiloNavarroCorrea
             joven.Genero = C_Genero.Text;
             joven.Fecha = FechaDeRegistro.Value;
             C_AuxilioE.Text = Convert.ToString(joven.auxilioEconomico());
+            C_ProximoP.Text = Convert.ToString(joven.calcularMeses());
             colaDeDatos.Enqueue(joven);
             DatosDeLaCola.DataSource = null;
             DatosDeLaCola.DataSource = colaDeDatos.ToList();
@@ -99,6 +100,7 @@ namespace Fase3JuanCamiloNavarroCorrea
             C_Comunas.Text = "";
             C_Genero.Text = "";
             C_AuxilioE.Clear();
+            C_ProximoP.Clear();
            
         }
 

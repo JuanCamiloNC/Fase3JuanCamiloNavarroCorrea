@@ -16,6 +16,7 @@ namespace Fase3JuanCamiloNavarroCorrea
         public string Genero { get; set; }
         public DateTime Fecha { get; set; }
         public double auxilio { get; set; }
+        public DateTime ProximoPago { get; set; }
 
         //Metosdos o Funciones
         
@@ -32,6 +33,12 @@ namespace Fase3JuanCamiloNavarroCorrea
                 this.auxilio = 50000;
             }
             return this.auxilio;
+        }
+        public DateTime calcularMeses()
+        {
+            //Los 90 dias son tres meses
+            this.ProximoPago = this.Fecha.AddDays(90);
+            return this.ProximoPago;
         }
     }
 }

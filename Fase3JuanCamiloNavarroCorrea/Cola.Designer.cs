@@ -52,7 +52,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.C_AuxilioE = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.C_ProximoP = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DatosDeLaCola)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -255,16 +255,17 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(386, 143);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 15);
+            this.label8.Size = new System.Drawing.Size(82, 15);
             this.label8.TabIndex = 16;
-            this.label8.Text = "Prosimo pago";
+            this.label8.Text = "Proximo pago";
             // 
-            // textBox1
+            // C_ProximoP
             // 
-            this.textBox1.Location = new System.Drawing.Point(514, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 17;
+            this.C_ProximoP.Enabled = false;
+            this.C_ProximoP.Location = new System.Drawing.Point(514, 135);
+            this.C_ProximoP.Name = "C_ProximoP";
+            this.C_ProximoP.Size = new System.Drawing.Size(177, 23);
+            this.C_ProximoP.TabIndex = 17;
             // 
             // Cola
             // 
@@ -272,7 +273,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.C_ProximoP);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.C_AuxilioE);
             this.Controls.Add(this.label7);
@@ -326,7 +327,7 @@
         private TextBox C_AuxilioE;
         private Label label7;
         private ToolStripMenuItem limpiarDatosToolStripMenuItem;
-        private TextBox textBox1;
+        private TextBox C_ProximoP;
         private Label label8;
     }
 }
