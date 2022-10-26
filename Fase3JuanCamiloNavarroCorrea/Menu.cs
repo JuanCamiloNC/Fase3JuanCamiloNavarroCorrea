@@ -34,5 +34,12 @@ namespace Fase3JuanCamiloNavarroCorrea
             cola.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Lista lista = new Lista();
+            lista.Show();
+            this.Hide();
+        }
     }
 }
