@@ -29,43 +29,55 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.L_tipoDeI = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.L_IdentificacionDelEs = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.L_estratoS = new System.Windows.Forms.ComboBox();
+            this.L_Nombre = new System.Windows.Forms.TextBox();
+            this.L_Edad = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.limpiarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.atrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarToolStripMenuItem,
+            this.eliminarToolStripMenuItem,
+            this.limpiarToolStripMenuItem,
+            this.atrasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // comboBox1
+            // L_tipoDeI
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.L_tipoDeI.FormattingEnabled = true;
+            this.L_tipoDeI.Items.AddRange(new object[] {
             "CC",
             "TI",
             "CE",
             "NIP",
             "NIT"});
-            this.comboBox1.Location = new System.Drawing.Point(202, 66);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 23);
-            this.comboBox1.TabIndex = 1;
+            this.L_tipoDeI.Location = new System.Drawing.Point(202, 66);
+            this.L_tipoDeI.Name = "L_tipoDeI";
+            this.L_tipoDeI.Size = new System.Drawing.Size(100, 23);
+            this.L_tipoDeI.TabIndex = 1;
             // 
             // label1
             // 
@@ -85,12 +97,12 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Identificacion del estudiante.";
             // 
-            // textBox1
+            // L_IdentificacionDelEs
             // 
-            this.textBox1.Location = new System.Drawing.Point(202, 111);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 4;
+            this.L_IdentificacionDelEs.Location = new System.Drawing.Point(202, 111);
+            this.L_IdentificacionDelEs.Name = "L_IdentificacionDelEs";
+            this.L_IdentificacionDelEs.Size = new System.Drawing.Size(100, 23);
+            this.L_IdentificacionDelEs.TabIndex = 4;
             // 
             // label3
             // 
@@ -113,45 +125,45 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 248);
+            this.label5.Location = new System.Drawing.Point(346, 201);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(134, 15);
             this.label5.TabIndex = 7;
             this.label5.Text = "Estrato socioeconomico";
             // 
-            // comboBox2
+            // L_estratoS
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.L_estratoS.FormattingEnabled = true;
+            this.L_estratoS.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4",
             "5",
             "6"});
-            this.comboBox2.Location = new System.Drawing.Point(202, 245);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(100, 23);
-            this.comboBox2.TabIndex = 8;
+            this.L_estratoS.Location = new System.Drawing.Point(536, 198);
+            this.L_estratoS.Name = "L_estratoS";
+            this.L_estratoS.Size = new System.Drawing.Size(100, 23);
+            this.L_estratoS.TabIndex = 8;
             // 
-            // textBox2
+            // L_Nombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(202, 153);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 9;
+            this.L_Nombre.Location = new System.Drawing.Point(202, 153);
+            this.L_Nombre.Name = "L_Nombre";
+            this.L_Nombre.Size = new System.Drawing.Size(100, 23);
+            this.L_Nombre.TabIndex = 9;
             // 
-            // textBox3
+            // L_Edad
             // 
-            this.textBox3.Location = new System.Drawing.Point(202, 198);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 10;
+            this.L_Edad.Location = new System.Drawing.Point(202, 198);
+            this.L_Edad.Name = "L_Edad";
+            this.L_Edad.Size = new System.Drawing.Size(100, 23);
+            this.L_Edad.TabIndex = 10;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 298);
+            this.label6.Location = new System.Drawing.Point(346, 159);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 15);
             this.label6.TabIndex = 11;
@@ -159,7 +171,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(202, 292);
+            this.dateTimePicker1.Location = new System.Drawing.Point(536, 153);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
             this.dateTimePicker1.TabIndex = 12;
@@ -167,7 +179,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(471, 70);
+            this.radioButton1.Location = new System.Drawing.Point(346, 70);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(61, 19);
             this.radioButton1.TabIndex = 13;
@@ -178,7 +190,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(471, 95);
+            this.radioButton2.Location = new System.Drawing.Point(346, 95);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(68, 19);
             this.radioButton2.TabIndex = 14;
@@ -186,30 +198,69 @@
             this.radioButton2.Text = "No voto";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 277);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(776, 150);
+            this.dataGridView1.TabIndex = 15;
+            // 
+            // registrarToolStripMenuItem
+            // 
+            this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
+            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.registrarToolStripMenuItem.Text = "Registrar";
+            this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
+            // 
+            // eliminarToolStripMenuItem
+            // 
+            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.eliminarToolStripMenuItem.Text = "Eliminar";
+            // 
+            // limpiarToolStripMenuItem
+            // 
+            this.limpiarToolStripMenuItem.Name = "limpiarToolStripMenuItem";
+            this.limpiarToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.limpiarToolStripMenuItem.Text = "Limpiar";
+            // 
+            // atrasToolStripMenuItem
+            // 
+            this.atrasToolStripMenuItem.Name = "atrasToolStripMenuItem";
+            this.atrasToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.atrasToolStripMenuItem.Text = "Atras";
+            this.atrasToolStripMenuItem.Click += new System.EventHandler(this.atrasToolStripMenuItem_Click);
+            // 
             // Lista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.L_Edad);
+            this.Controls.Add(this.L_Nombre);
+            this.Controls.Add(this.L_estratoS);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.L_IdentificacionDelEs);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.L_tipoDeI);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Lista";
             this.Text = "Lista";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,19 +269,24 @@
         #endregion
 
         private MenuStrip menuStrip1;
-        private ComboBox comboBox1;
+        private ComboBox L_tipoDeI;
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox L_IdentificacionDelEs;
         private Label label3;
         private Label label4;
         private Label label5;
-        private ComboBox comboBox2;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private ComboBox L_estratoS;
+        private TextBox L_Nombre;
+        private TextBox L_Edad;
         private Label label6;
         private DateTimePicker dateTimePicker1;
         private RadioButton radioButton1;
         private RadioButton radioButton2;
+        private ToolStripMenuItem registrarToolStripMenuItem;
+        private ToolStripMenuItem eliminarToolStripMenuItem;
+        private ToolStripMenuItem limpiarToolStripMenuItem;
+        private ToolStripMenuItem atrasToolStripMenuItem;
+        private DataGridView dataGridView1;
     }
 }

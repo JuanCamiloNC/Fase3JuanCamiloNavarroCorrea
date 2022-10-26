@@ -16,5 +16,28 @@ namespace Fase3JuanCamiloNavarroCorrea
         {
             InitializeComponent();
         }
+        List<ListaEstudiante> listStuden = new List<ListaEstudiante>();
+
+        private void atrasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Hide();
+
+        }
+        public void limpiarLista()
+        {
+            L_estratoS.Text = "";
+            L_IdentificacionDelEs.Text = "";
+            L_Nombre.Clear();
+            L_tipoDeI.Text = "";
+            L_Edad.Clear();
+        }
+
+        private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaEstudiante estudiante = new ListaEstudiante();
+            
+        }
     }
 }
